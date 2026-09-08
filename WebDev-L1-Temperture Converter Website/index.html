@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Temperature Converter</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="converter-container">
+
+        <h1>Temperature Converter</h1>
+        <p class="subtitle">
+            Convert between Celsius, Fahrenheit and Kelvin
+        </p>
+
+        <form id="temperatureForm" novalidate>
+
+            <!-- Temperature Input -->
+            <div class="form-group">
+                <label for="temperature">Temperature</label>
+
+                <input type="number" id="temperature" name="temperature" step="any" placeholder="Enter temperature"
+                    required aria-describedby="errorMessage">
+
+                <p id="errorMessage" class="error"></p>
+            </div>
+
+            <!-- Unit Selection -->
+            <div class="form-group">
+                <label for="unit">Input Unit</label>
+
+                <select id="unit" name="unit">
+                    <option value="celsius">Celsius (°C)</option>
+                    <option value="fahrenheit">Fahrenheit (°F)</option>
+                    <option value="kelvin">Kelvin (K)</option>
+                </select>
+            </div>
+
+            <!-- Convert Button -->
+            <button type="submit">
+                Convert Temperature
+            </button>
+
+        </form>
+
+        <!-- Results -->
+        <div class="results">
+
+            <h2>Results</h2>
+
+            <div class="result-row">
+                <span>Celsius</span>
+                <span id="celsiusResult">—</span>
+            </div>
+
+            <div class="result-row">
+                <span>Fahrenheit</span>
+                <span id="fahrenheitResult">—</span>
+            </div>
+
+            <div class="result-row">
+                <span>Kelvin</span>
+                <span id="kelvinResult">—</span>
+            </div>
+
+            <p id="statusMessage" class="status">
+                Enter a temperature and click Convert.
+            </p>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
