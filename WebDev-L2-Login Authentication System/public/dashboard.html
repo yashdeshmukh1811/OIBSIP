@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Nexus Auth</title>
+    <meta name="description" content="Your protected dashboard.">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body id="dashboard-page">
+    <div class="container dashboard-container" style="display: none;">
+        <h2>Dashboard</h2>
+        <p class="subtitle">You have successfully accessed the protected area.</p>
+        
+        <div style="background: rgba(15, 23, 42, 0.5); padding: 2rem; border-radius: 12px; margin-bottom: 2rem; border: 1px solid var(--border);">
+            <h3>Hello, <span id="usernameDisplay" style="color: var(--primary);">User</span>!</h3>
+            <p style="margin-top: 1rem; color: var(--text-muted);">This is a protected page. Only authenticated users can see this content.</p>
+        </div>
+
+        <button id="logoutBtn" class="secondary-btn" style="max-width: 200px; margin: 0 auto;">Logout</button>
+    </div>
+    <script src="js/auth.js"></script>
+</body>
+</html>
