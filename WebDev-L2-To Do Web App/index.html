@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A premium, glassmorphism To-Do application built with Vanilla JS">
+    <title>Premium To-Do App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Boxicons for icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Tasks</h1>
+            <p class="subtitle">Organize your day with style</p>
+        </header>
+
+        <section class="input-section">
+            <input type="text" id="task-input" placeholder="What needs to be done?">
+            <button id="add-task-btn" aria-label="Add task"><i class='bx bx-plus'></i></button>
+        </section>
+
+        <main>
+            <section class="task-list-section" id="pending-section">
+                <div class="list-header">
+                    <h2>Pending</h2>
+                    <span class="count-badge" id="pending-count">0 pending</span>
+                </div>
+                <div id="pending-empty" class="empty-state">No pending tasks. You're all caught up!</div>
+                <ul id="pending-list" class="task-list"></ul>
+            </section>
+
+            <section class="task-list-section" id="completed-section">
+                <div class="list-header">
+                    <h2>Completed</h2>
+                    <span class="count-badge" id="completed-count">0 completed</span>
+                </div>
+                <div id="completed-empty" class="empty-state">No completed tasks yet. Let's get to work!</div>
+                <ul id="completed-list" class="task-list"></ul>
+            </section>
+        </main>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
